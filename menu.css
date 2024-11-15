@@ -1,0 +1,140 @@
+/* Global styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;  /* Assure que le body prend toute la hauteur de la page */
+    background: url('marbreee.jpg') no-repeat center center fixed; /* Fond marbré */
+    background-size: cover;  /* Assure que l'image couvre toute la page */
+    background-attachment: fixed;  /* Le fond reste fixe lors du défilement */
+    color: #333;
+    overflow-x: hidden;  /* Empêche le défilement horizontal */
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+    color: #fff;
+    padding: 20px 40px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+header .logo h1 {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #D8CAB8; /* Changement couleur au survol */
+}
+
+/* Section Menu */
+#menu {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc semi-transparent */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre du menu */
+#menu h2 {
+    font-size: 48px;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+/* Cartes du menu */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2d2d2d;
+}
+
+.menu-item {
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateX(10px);
+    color: #D8CAB8; /* Highlight color on hover */
+}
+
+.menu-item span {
+    color: #777;
+    font-weight: 500;
+}
+
+/* Hover Effect for the Cards */
+.card:hover {
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
